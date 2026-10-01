@@ -3,11 +3,20 @@
 # You are going to write a very simple program:
 
 # Ask a user to enter two numbers (one per input)
+num1 = input("Enter number 1: ")
+if (num1.isnumeric() == False):
+    print("That is not a number")
+    exit()
+
+num2 = input("Enter number 2: ")
+if (num2.isnumeric() == False):
+    print("That is not a number")
+    exit()
 
 # multiply those numbers together
-
+answer = int(num1) * int(num2)
 # print out the result
-
+print(answer)
 # There is an extra point available for validating that they entered numbers!
 # Add to your code so that if they entered something other than an integer it prints
 # 'That is not a number' and exits.
