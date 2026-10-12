@@ -4,7 +4,7 @@
 # the `with` statement closes the file automatically as the block of code finishes executing
 
 with open('file_data.txt', 'r') as file:  
-
+    
     while True:
         # read by character
         char = file.read(1)            # read exactly 1 character from the file      
@@ -21,3 +21,4 @@ with open('file_data.txt', 'r') as file:
 # We use 'break' to exit the reading process at the end of the file.
 
 # Why do we use an infinite 'while True' loop for this process?
+# because we do not know how many characters the file will contain this allows us to remain flexible.
