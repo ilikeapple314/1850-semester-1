@@ -4,6 +4,18 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 # open and read the file
+wordCount = 0
+
+with open("story2.txt" , "r") as file:
+    words = [line.strip().split(" ") for line in file]
+
+for line in words:
+    for word in line:
+        if(word != ""):
+            wordCount = wordCount + 1
+
+print(words)
+print(wordCount)
 
 # calculate the number of words
 # hint: you could use .split() to break up by spaces

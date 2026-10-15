@@ -2,7 +2,13 @@
 
 animals = ['dog','cat','hamster','goldfish']
 
-not_fish = [item for item in animals if item != 'goldfish']
+# not_fish = [item for item in animals if item != 'goldfish']
+
+
+not_fish = []
+for animal in animals:
+    if(animal != "goldfish"):
+        not_fish.append(animal)
 
 print(not_fish)
 

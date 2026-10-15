@@ -4,12 +4,13 @@ values = [1,4,2,6,3,7]
 
 print(values)
 
-newval = []
-for i in values:
-    if i % 2 == 0:
-        newval.append(2 * i)
-    else:
-        newval.append(i)
+newval = [value * 2 if value % 2 == 0 else value for value in values]
+
+#for i in values:
+#    if i % 2 == 0:
+#        newval.append(2 * i)
+#    else:
+#        newval.append(i)
 
 print(newval)
 
