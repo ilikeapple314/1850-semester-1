@@ -1,7 +1,7 @@
 """
 Portfolio Task - Week 1.3
 By submitting this code you are declaring that all work in this file, other than any provided template code, was written and developed by you independently.
-Name: 
+Name: Aaron Rich
 """
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
@@ -9,9 +9,24 @@ states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 systime = 0
 maxtime = int(input())  # read an integer number of steps (>0)
 
-state = "red"
 
-print(f"Time {systime:03} State {state}")
+while (maxtime >= systime):
+    tempTime = systime
+    while(tempTime >= 15):
+        tempTime = tempTime - 15
+
+    if(tempTime <= 3):
+        state = "red"
+    elif(tempTime <= 6):
+        state = "red_amber"
+    elif(tempTime <= 11):
+        state = "green"
+    else:
+        state = "amber"
+
+
+    print(f"Time {systime:03} State {state}")
+    systime = systime + 1
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 

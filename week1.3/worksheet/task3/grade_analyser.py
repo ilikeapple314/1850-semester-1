@@ -4,7 +4,47 @@
 
 # ask for filename of the student file
 
+studentFiles = input("Enter file name: ")
+
 # open the file
+
+with open(studentFiles , "r") as file:
+    students = [line.strip().split(",") for line in file]
+
+for student in students:
+    if(student[0] == "student_id"):
+        continue
+    else:
+        studentID = student[0]
+        totalScore = 0
+        totalScores = 0
+    for grades in student:
+        if(grades.isdigit() and grades != ""):
+            grade = int(grades)
+            totalScore = totalScore + grade
+            totalScores = totalScores + 1
+
+    average_grade = totalScore / totalScores
+    classification = ""
+
+    if(average_grade >= 70):
+        classification = "1"
+    elif(average_grade >= 60):
+        classification = "2:1"
+    elif(average_grade >= 50):
+        classification = "2:2"
+    elif(average_grade >= 40):
+        classification = "3"
+    else:
+        classification = "F"
+
+
+    with open("input_file_name + _out.csv", "a") as file:
+        file.write(f"{studentID},{average_grade:.2f},{classification} \n")
+
+
+
+
 
 # read in the data, and for each student calculate their average grade and classification
 
