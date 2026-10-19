@@ -16,6 +16,7 @@ def check_vote_eligibility(age):
 
 
 age = int(input("Enter your age: "))
-check_vote_eligibility(age)
+
 
 # what is the return value from check_vote_eligibility?
+# it returns nothing it only prints a response. If you try and print it it simply returns none
