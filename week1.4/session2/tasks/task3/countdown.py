@@ -16,8 +16,15 @@ def countdown(n):
 
     # Complete your code here
     # base case
+ #   print(n)
+ #   if (n>0):
+ #       countdown(n-1)
 
     # recursive case
+    
+    while(n>=0):
+        print(n)
+        n = n-1
 
 
 # check if correct output is produced
@@ -27,3 +34,4 @@ countdown(5)     # 5 ... 0  (Note: each number in printed in a separate line)
 
 # Once you have completed, your next task is to write an equivalent function that
 # uses a loop.
+

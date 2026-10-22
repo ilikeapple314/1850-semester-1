@@ -10,12 +10,23 @@
 
 # Your task is to complete the definition of the function, and set a
 # default value to the optional argument pi_value. You can set it to
-# either (1) 3.14, (2) 3.142, (4) 3.1428, or (4) 3.142857 and observed
+# either (1) 3.14, (2) 3.142, (3) 3.1428, or (4) 3.142857 and observed
 # the output produced the the function is used.
 
+import math
 
-def circle_area(radius, pi_value):  # assign a default value to pi_value
+def circle_area(radius, pi_value = math.pi):  # assign a default value to pi_value
     # complete the code here
+    if(pi_value ==1):
+        pi_value = 3.14
+    elif(pi_value ==2):
+        pi_value = 3.142
+    elif(pi_value ==3):
+            pi_value = 3.1428
+    elif(pi_value ==4):
+            pi_value = 3.142857
+    
+    area = pi_value * radius * radius
 
     return area
 
