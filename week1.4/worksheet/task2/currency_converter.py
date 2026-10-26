@@ -6,7 +6,7 @@
     other than any provided template code, was written and developed by
     you independently.
 
-    Name:
+    Name: Aaron Rich
 """
 
 def currency_converter(amount, from_currency, to_currency):
@@ -19,8 +19,16 @@ def currency_converter(amount, from_currency, to_currency):
     }
 
     # your code here
+    if(amount <= 0):
+        return 0.0
+    else:
+        whoConversion = conversion_rate[from_currency]
+        conversionAmount = whoConversion[to_currency]
+        convertedSum = round(conversionAmount * amount,2)
 
-    return None
+    return convertedSum
+
+
 
 # Submit only this file currency_converter.py with the completed function.
 

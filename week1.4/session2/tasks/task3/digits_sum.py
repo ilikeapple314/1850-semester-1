@@ -20,7 +20,7 @@ def digits_sum(number, total = 0):
     # complete your code here
     # base case
     if(number != 0):
-        
+        print(total)
     # recursive case
         tempNum = math.trunc(number/10) * 10
         currentDigit = number - tempNum
