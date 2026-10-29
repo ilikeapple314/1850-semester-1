@@ -2,3 +2,12 @@
 
 # Write a program here that creates two Money objects, prints them,
 # then adds them together and prints their sum
+
+import money
+
+rich = money.Money(100,50)
+veryRich = money.Money(200,68)
+
+superRich = rich + veryRich
+
+print(superRich)

@@ -33,6 +33,10 @@ class Point:
 
     # Implement a __str__() method here
 
+    def __str__(self):
+        point = (f"({self.x},{self.y})")
+        return point
+
 
 class Circle:
     """
@@ -63,3 +67,7 @@ class Circle:
         return 2.0 * math.pi * self.radius
 
     # Implement a __str__() method here
+
+    def __str__(self):
+        point = (f"Centre = {self.centre} \nRadius = {self.radius}")
+        return point
