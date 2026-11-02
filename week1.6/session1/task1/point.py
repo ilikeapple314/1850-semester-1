@@ -32,3 +32,19 @@ class Point:
         Returns distance of this Point from another Point.
         """
         return math.hypot(self.x - p.x, self.y - p.y)
+    def __eq__(self, other):
+        if not isinstance(other, Point):
+            raise TypeError("other must be a point")
+
+        if(self.x == other.x) and (self.y == other.y):
+            return True
+        else:
+            return False
+
+p = Point(1,2)
+q = Point(1,2)
+
+if q == p:
+    print("p is equal to q")
+else:
+    print("p does not equal q")
