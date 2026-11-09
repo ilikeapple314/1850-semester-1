@@ -1,5 +1,6 @@
 # from Week 4, Session 1: Task 4
 
+import random
 
 def process_data(data):
     """
@@ -16,3 +17,10 @@ def process_data(data):
         return None
 
     return sum(data)
+
+
+testList = []
+
+while (len(testList) <= 10):
+    print(f"original list: {testList} sum value: {process_data(testList)}")
+    testList.append(random.randint(0,100))

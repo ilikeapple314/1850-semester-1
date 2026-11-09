@@ -13,3 +13,8 @@ def comfort_level(temperature):
         return "HOT"
     else:
         return "OK"
+
+t = -5.0
+while(t<=30):
+    print(f"Tempo: {t} Returns: {comfort_level(t)}")
+    t = t+1
