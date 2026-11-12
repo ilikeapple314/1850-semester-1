@@ -9,7 +9,7 @@ def calculate_total(cart_items):
     print(f"[DEBUG 1] Initial subtotal: {subtotal}") # Track starting state
     
     if subtotal > 50:
-        subtotal * 0.90  
+        subtotal = subtotal * 0.90  
         print(f"[DEBUG 2] Inside discount block. Subtotal is now: {subtotal}") 
         
     final_total = subtotal + 5
