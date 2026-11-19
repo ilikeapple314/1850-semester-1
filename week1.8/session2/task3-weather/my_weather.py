@@ -3,7 +3,7 @@ import httpx
 import pandas as pd
 import matplotlib.pyplot as plt
 
-api_key="U6KXJTZC2E8VGH39PD7UMG4BZ"   # your API key
+api_key="8FMQBZZFN3FFYSH7JPKVF88FB"   # your API key
 
 city="Leeds"     # city location
 country="UK"     # country location
@@ -31,7 +31,16 @@ print(data)
 # extract the temperature data as lists from the JSON dictionary
 temp_data = data['days']
 
-print(temp_data)
+print(f"\nTEMP DATA: {temp_data}")
+
+#converting to celcius
+
+cel_temp_data = {}
+
+for item in temp_data:
+    for temp in item.values():
+        temp = (temp - 32)/1.8
+        temp.append(temp)
 
 # use pandas to convert data to  dataframe
 
@@ -41,11 +50,16 @@ df = pd.DataFrame(temp_data)
 
 df.plot()
 
-plt.show()
+
 
 # annotate the graph with axis labels
+
+plt.xlabel("Days")
+plt.ylabel("Temp(F)")
 
 # note that temperature is in Farenheit (F)
 # convert to Celcius before plotting 
 
 # using the documentation explore other data, eg. rainfall  
+
+plt.show()

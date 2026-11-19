@@ -15,7 +15,7 @@ The code `fetch_post.py` demonstrates a successful GET request
 
 The `httpx.get(url)` method returns a `response` object that we can interrogate
 - we should first check the response code
-    - modify the code to first print the response code as part of the program output
+- modify the code to first print the response code as part of the program output
 - if it is successful (200) we can extract the JSON content
 
 # Compare to command-line httpx
