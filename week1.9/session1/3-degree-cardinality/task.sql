@@ -12,3 +12,18 @@
 
 -- And to see a count of the total number of tuples
 SELECT COUNT(*) as Cardinality FROM customers; 
+
+
+-- A
+SELECT name, hygiene_rating FROM restaurants
+WHERE hygiene_rating = 5;
+-- B
+SELECT name, postcode FROM restaurants
+WHERE postcode LIKE 'LS6%';
+-- C
+SELECT name, cuisine FROM restaurants
+WHERE cuisine = 'italian';
+-- D
+SELECT name, cuisine, hygiene_rating FROM restaurants
+WHERE cuisine = 'Italian' OR
+cuisine = 'Thai' AND hygiene_rating >= 0;
