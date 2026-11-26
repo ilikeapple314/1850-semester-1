@@ -65,3 +65,6 @@ CREATE TABLE reviews (
     comment    TEXT,                      -- optional, may be NULL
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
+
+INSERT INTO restaurants (restaurant_id, name, cuisine, postcode, hygiene_rating)
+VALUES (73, 'Melon', 'my garden', 'ME1 0N', 5);  
