@@ -3,7 +3,7 @@ import httpx
 
 base_url = "https://dummyjson.com/"
 
-content = "products/search?q=apple"
+content = "recipe/meal-type/snack"
 
 url = base_url + content  # API request
 
